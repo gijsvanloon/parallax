@@ -1,0 +1,186 @@
+@keyframes animate-reveal {
+	0% {
+		transform: translate3d(100%, 0, 0);
+	}
+	35%,
+	65% {
+		transform: translate3d(0, 0, 0);
+	}
+	100% {
+		transform: translate3d(-100%, 0, 0);
+	}
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+.reveal {
+  position: fixed;
+  width: 100%;
+  pointer-events: none;
+  height: 100%;
+  background-color: #292b2c;
+  transform: translateX(100%);
+  z-index: 1000;
+}
+
+.reveal--animate {
+  animation: animate-reveal 2.5s cubic-bezier(0.2, 0.49, 0.32, 0.99) forwards;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  background: black;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.vignette {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.65));
+}
+
+.parallax {
+  pointer-events: none;
+  transition: 0.45s cubic-bezier(0.2, 0.49, 0.32, 0.99);
+  animation: fade-in 3s cubic-bezier(0.2, 0.49, 0.32, 0.99) forwards;
+  opacity: 0;
+  animation-delay: 2s;
+}
+
+.parallax:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.parallax:nth-child(6) {
+  animation-delay: 2.5s;
+}
+
+.parallax:nth-child(8) {
+  animation-delay: 3s;
+}
+
+.parallax:nth-child(10) {
+  animation-delay: 3.5s;
+}
+
+.img1 {
+  position: absolute;
+  width: 2800px;
+  top: calc(50% - 0px);
+  left: calc(50% - 0px);
+  z-index: 1;
+}
+
+.img2 {
+  position: absolute;
+  width: 1900px;
+  top: calc(50% - 0px);
+  left: calc(50% - 0px);
+  z-index: 2;
+}
+
+.img3 {
+  position: absolute;
+  width: 800px;
+  top: calc(50% - 200px);
+  left: calc(50% - -350px);
+  z-index: 3;
+}
+
+.text {
+  position: absolute;
+  z-index: 4;
+  top: calc(50% - 150px);
+  left: calc(50% - 0px);
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  pointer-events: auto;
+}
+
+.text h2 {
+  font-weight: 100;
+  font-size: 6.5rem;
+}
+
+.text h1 {
+  font-weight: 900;
+  font-size: 8rem;
+  line-height: 0.88;
+}
+
+.img4 {
+  position: absolute;
+  width: 2100px;
+  top: calc(50% - -550px);
+  left: calc(50% - 0px);
+  z-index: 5;
+}
+
+.img5 {
+  position: absolute;
+  width: 1920px;
+  top: calc(50% - -400px);
+  left: calc(50% - -850px);
+  z-index: 6;
+}
+
+.img6 {
+  position: absolute;
+  width: 500px;
+  top: calc(50% - -50px);
+  left: calc(50% - 650px);
+  z-index: 7;
+}
+
+.img7 {
+  position: absolute;
+  width: 2000px;
+  top: calc(50% - -450px);
+  left: calc(50% - 850px);
+  z-index: 8;
+}
+
+.img8 {
+  position: absolute;
+  width: 200px;
+  top: calc(50% - 100px);
+  left: calc(50% - -650px);
+  z-index: 9;
+}
+
+.img9 {
+  position: absolute;
+  width: 2300px;
+  top: calc(50% - 800px);
+  left: calc(50% - -1350px);
+  z-index: 10;
+}
